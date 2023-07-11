@@ -4,6 +4,7 @@ import * as dotenv from "dotenv";
 import morgan from "morgan";
 import path from "path";
 import	'./src/database/dbConnection'
+import tareasRouter from "./src/routes/tareas.routes"
 
 dotenv.config();
 
@@ -24,3 +25,5 @@ app.use(morgan('dev'))
 
 console.log(path.join(__dirname, "/public"));
 app.use(express.static(path.join(__dirname, "/public")))
+
+app.use("/tareas", tareasRouter)
