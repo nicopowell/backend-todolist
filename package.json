@@ -1,0 +1,27 @@
+{
+  "name": "todolist-backend",
+  "version": "1.0.0",
+  "description": "Backend del ejercicio To Do List",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "dev": "nodemon --exec babel-node index.js"
+  },
+  "keywords": [
+    "To do List"
+  ],
+  "author": "Nicolas Powell",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "i": "^0.3.7",
+    "mongoose": "^7.3.2",
+    "morgan": "^1.10.0",
+    "npm": "^9.8.0"
+  }
+}
