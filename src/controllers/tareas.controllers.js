@@ -59,3 +59,17 @@ export const borrarTarea = async (req, res) => {
         });
     }
 };
+
+export const editarTarea = async (req, res) => {
+    try {
+        await Tarea.findByIdAndUpdate(req.params.id, req.body);
+        res.status(200).json({
+            mensaje: "La tarea fue actualizada correctamente",
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(404).json({
+            mensaje: "Error, no se pudo borrar el producto",
+        });
+    }
+};
